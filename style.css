@@ -1,0 +1,11 @@
+button:invalid + .alert-danger {
+    display:block;
+  }
+  
+  button:valid:not([data-success="true"]) + .alert-warning {
+    display:block;
+  }
+  
+  button[data-success="true"]:valid + .alert-success {
+    display:block;
+  }
