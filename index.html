@@ -24,25 +24,25 @@
                 </div>
             </div>
             <div class="mb-3 row">
-                <div class="col-6">
+                <div class="col-md-6 col-12">
                     <fieldset>
                         <label for="card" class="form-label">Card #</label>
                         <input type="number" id="card" name="Card" class="form-control" placeholder="XXXXXXXXXXXXXXXX"
                             autofocus required minlength="16">
                     </fieldset>
                 </div>
-                <div class="col-2">
+                <div class="col-md-2 col-4">
                     <fieldset>
                         <label for="cvc" class="form-label">CVC #</label>
                         <input type="number" id="cvc" name="CVC" class="form-control" placeholder="0000" required
                             minlength="3" maxlength="3">
                     </fieldset>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 col-8">
                     <fieldset>
                         <label for="amount" class="form-label">Amount #</label>
                         <div class="d-flex justify-content-start">
-                            <p><b>$</b></p>
+                            <p class="align-items-center m-2"><b>$</b></p>
                             <input type=" number" id="amount" name="Amount" class="form-control" placeholder="Amount"
                                 required required minlength="3">
                         </div>
@@ -50,81 +50,85 @@
                 </div>
             </div>
             <div class="mb-3 row">
-                <div class="col-6">
+                <div class="col-md-6 col-12">
                     <fieldset>
                         <label for="firstName" class="form-label">First Name</label>
-                        <input type="text" id="firstName" name="FirstName" class="form-control" required minlength="3">
+                        <input type="text" id="firstName" name="FirstName" class="form-control" required minlength="3"
+                            pattern="[A-Za-z]+">
                     </fieldset>
+                </div>
+                <div class="col-md-6 col-12">
                     <fieldset>
-                        <label for="city" class="form-label">City</label>
-                        <input type="text" id="city" name="City" class="form-control">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" id="lastName" name="LastName" class="form-control" required minlength="3"
+                            pattern="[A-Za-z]+">
                     </fieldset>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6 col-12">
                     <fieldset>
-                        <label>We accept:</label>
-                        <div class="d-flex justify-content-start p-3 mb-2 gap-3 bg-secondary text-white w-50 rounded">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="Mastercard" id="card1" checked>
+                        <label for="city" class="form-label ">City</label>
+                        <input type="text" id="city" name="City" class="form-control" pattern="[A-Za-z]+">
+                    </fieldset>
+                </div>
+                <div class="col-md-3 col-6">
+                    <label for="state" class="form-label">State</label>
+                    <select id="state" class="form-select" name="State" aria-label="Default select example">
+                        <option selected>Pick a state</option>
+                        <option value="España">España</option>
+                        <option value="EEUU">EEUU</option>
+                        <option value="China">China</option>
+                    </select>
+                </div>
+                <div class="col-md-3 col-6">
+                    <label for="postal" class="form-label">Postal Code</label>
+                    <input type="number" id="postal" name="Postal" class="form-control">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-md-6 col-12 d-flex justify-content-start p-3 mb-2 gap-3 bg-secondary text-white w-50 rounded content-wrapper">
+                    <fieldset>
+                        <div class="mb-3 row"> 
+                        <label>We accept:</label> 
+                                         
+                            <div class="form-check col-3 gap-2">
+                                <input class="form-check-input" type="radio" name="card" id="card1" checked>
                                 <label class="form-check-label" for="card1"><i class="fa-brands fa-cc-mastercard fs-4"
                                         style="color: #ffffff;"></i></label>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="Visa" id="card2">
+                            <div class="form-check col-3 gap-2">
+                                <input class="form-check-input" type="radio" name="card" id="card2">
                                 <label class="form-check-label" for="card2"><i class="fa-brands fa-cc-visa fs-4"
                                         style="color: #ffffff;"></i></label>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="Dinner" id="card3">
+                            <div class="form-check col-3 gap-2">
+                                <input class="form-check-input" type="radio" name="card" id="card3">
                                 <label class="form-check-label" for="card3"><i class="fa-brands fa-cc-diners-club fs-4"
                                         style="color: #ffffff;"></i></label>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="AmericanExpress" id="card4">
+                            <div class="form-check col-3 gap-2">
+                                <input class="form-check-input" type="radio" name="card" id="card4">
                                 <label class="form-check-label" for="card4"><i class="fa-brands fa-cc-amex fs-4"
                                         style="color: #ffffff;"></i></label>
                             </div>
                         </div>
                     </fieldset>
                 </div>
-                <div class="col-6">
-                    <div>
-                        <fieldset>
-                            <label for="lastName" class="form-label">Last Name</label>
-                            <input type="text" id="lastName" name="LastName" class="form-control" required
-                                minlength="3">
-                        </fieldset>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <label for="state" class="form-label">State</label>
-                            <select id="state" class="form-select" name="State" aria-label="Default select example">
-                                <option selected>Pick a state</option>
-                                <option value="España">España</option>
-                                <option value="EEUU">EEUU</option>
-                                <option value="China">China</option>
-                            </select>
+                <div class="col-md-6 col-12">
+                    <fieldset>
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="Message"></textarea>
+                        <div id="messageHelpBlock" class="form-text">
+                            Add any notes here.
                         </div>
-                        <div class="col-6">
-                            <label for="postal" class="form-label">Postal Code</label>
-                            <input type="number" id="postal" name="Postal" class="form-control">
-                        </div>
-                    </div>
-                    <div>
-                        <fieldset>
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" name="Message"></textarea>
-                            <div id="messageHelpBlock" class="form-text">
-                                Add any notes here.
-                            </div>
-                        </fieldset>
-                    </div>
+                    </fieldset>
                 </div>
             </div>
-            <div
-                class="row  gap-2 d-flex justify-content-end p-3 mb-2 border-top border-2 border-secondary rounded-low ">
-                <button id="myBtn" class="col-1 btn btn-secondary">Cancel</button>
-                <button type="submit" class="col-1 btn btn-primary">Send</button>
-
-            </div>
+                <div class=" row gap-2 p-3 mb-2 d-flex justify-content-end  border-top border-2 border-secondary rounded-low ">
+                    <button id="myBtn" class=" col-md-2 col-12 btn btn-secondary">Cancel</button>
+                    <button type="submit" class="col-md-2 col-12 btn btn-primary">Send</button>
+                </div>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

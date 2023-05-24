@@ -1,4 +1,3 @@
-var boton = document.getElementById("myBtn");
 var div = document.getElementById("my-alert");
 
 boton.addEventListener("click", function() {
